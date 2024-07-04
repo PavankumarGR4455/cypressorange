@@ -46,6 +46,8 @@ describe("Adding job title",() =>{
 
         cy.contains('Success').should('be.visible')
 
+        // checking the difference  in git new branch
+
         // checking whether job is saved and reurn back to title page.
 
         cy.url().should('eq',"https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewJobTitleList")
