@@ -12,7 +12,7 @@ module.exports = defineConfig({
       return config;
     },
 
-    specPattern :"**/*.feature",
+    //specPattern :"**/*.feature",
 
     baseUrl:'https://opensource-demo.orangehrmlive.com',
     defaultCommandTimeout:7000,
