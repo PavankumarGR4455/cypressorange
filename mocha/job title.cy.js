@@ -1,6 +1,7 @@
 //import logindetails from "../fixtures/login_jobdetails.json"
 
 import addjobdetails from "../../fixtures/admin/addjobdetails.json"
+import login from "../cypress/Pageobject/loginpage.po"
 
 describe("Adding job title",() =>{
 
@@ -12,11 +13,11 @@ describe("Adding job title",() =>{
 
        // cy.get('input[type="password"]').type(logindetails.password)     #using import statement we can access login details
 
-       cy.get('input[ name="username"]').type(Cypress.env("username"))
+       cy.get(login.usernameinput()).type(Cypress.env("username"))
 
-       cy.get('input[type="password"]').type(Cypress.env('password'))
+       cy.get(login.passwordinput()).type(Cypress.env('password'))
 
-        cy.get('button[type="submit"]').click()   // Login to dashboard
+        cy.get(login.loginbutton()).click()   // Login to dashboard
 
         // verifing whether it is displaying Dashboard with assert
 
